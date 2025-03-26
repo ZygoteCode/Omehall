@@ -53,10 +53,10 @@ Public Class CommandExecutor
                                    "[ADMIN] " + Trigger + "setrole <id> <role> - Set the role of a user." + vbNewLine +
                                    "[ADMIN] " + Trigger + "broadcast <message> - Send a broadcast to all users."
             End If
-            Messaj += vbNewLine + vbNewLine + "Bot created by: " + vbNewLine + vbNewLine + "Discord » ZioJoJo#0326" + vbNewLine + "Telegram » @nonesisteròmaipiu"
+            Messaj += vbNewLine + vbNewLine + "Bot created by: " + vbNewLine + vbNewLine + "No info" + vbNewLine + "No info"
             Author.SendMessageAsync(Messaj)
         ElseIf FirstArg = "rules" Then
-            Author.SendMessageAsync(System.IO.File.ReadAllText(Application.StartupPath & "\bot\rules.txt") + vbNewLine + vbNewLine + "Discord » ZioJoJo#0326" + vbNewLine + "Telegram » @nonesisteròmaipiu")
+            Author.SendMessageAsync(System.IO.File.ReadAllText(Application.StartupPath & "\bot\rules.txt") + vbNewLine + vbNewLine + "No info" + vbNewLine + "No info")
         ElseIf FirstArg = "start" Then
             Author.SendMessageAsync("We are matching you with a random stranger...")
             QueueManager.GetWaitingUsers().Add(Message.Author)
@@ -74,7 +74,7 @@ Public Class CommandExecutor
         ElseIf FirstArg = "stop" Then
             Author.SendMessageAsync("You are not currently connected with a stranger.")
         ElseIf FirstArg = "vip" Then
-            Author.SendMessageAsync(System.IO.File.ReadAllText(Application.StartupPath & "\bot\vip.txt") + vbNewLine + vbNewLine + "Discord » ZioJoJo#0326" + vbNewLine + "Telegram » @nonesisteròmaipiu")
+            Author.SendMessageAsync(System.IO.File.ReadAllText(Application.StartupPath & "\bot\vip.txt") + vbNewLine + vbNewLine + "No info" + vbNewLine + "No info")
         ElseIf FirstArg = "onlygirls" Then
             If UserVariables.GetRole(Author.Id) = "User" Or UserVariables.GetRole(Author.Id) = "Bronze" Then
                 Author.SendMessageAsync("You are not VIP.")
@@ -390,10 +390,10 @@ Public Class CommandExecutor
                                    "[ADMIN] " + Trigger + "setrole <id> <role> - Set the role of a user." + vbNewLine +
                                    "[ADMIN] " + Trigger + "broadcast <message> - Send a broadcast to all users."
             End If
-            Messaj += vbNewLine + vbNewLine + "Bot created by: " + vbNewLine + vbNewLine + "Discord » ZioJoJo#0326" + vbNewLine + "Telegram » @nonesisteròmaipiu"
+            Messaj += vbNewLine + vbNewLine + "Bot created by: " + vbNewLine + vbNewLine + "No info" + vbNewLine + "No info"
             TelegramBot.GetTelegram().SendTextMessageAsync(Author.Id, Messaj)
         ElseIf FirstArg = "rules" Then
-            TelegramBot.GetTelegram().SendTextMessageAsync(Author.Id, System.IO.File.ReadAllText(Application.StartupPath & "\bot\rules.txt") + vbNewLine + vbNewLine + "Discord » ZioJoJo#0326" + vbNewLine + "Telegram » @nonesisteròmaipiu")
+            TelegramBot.GetTelegram().SendTextMessageAsync(Author.Id, System.IO.File.ReadAllText(Application.StartupPath & "\bot\rules.txt") + vbNewLine + vbNewLine + "No info" + vbNewLine + "No info")
         ElseIf FirstArg = "start" Then
             TelegramBot.GetTelegram().SendTextMessageAsync(Author.Id, "We are matching you with a random stranger...")
             QueueManager.GetWaitingUsers1().Add(Message.Message.From)
@@ -411,7 +411,7 @@ Public Class CommandExecutor
         ElseIf FirstArg = "stop" Then
             TelegramBot.GetTelegram().SendTextMessageAsync(Author.Id, "You are not currently connected with a stranger.")
         ElseIf FirstArg = "vip" Then
-            TelegramBot.GetTelegram().SendTextMessageAsync(Author.Id, System.IO.File.ReadAllText(Application.StartupPath & "\bot\vip.txt") + vbNewLine + vbNewLine + "Discord » ZioJoJo#0326" + vbNewLine + "Telegram » @nonesisteròmaipiu")
+            TelegramBot.GetTelegram().SendTextMessageAsync(Author.Id, System.IO.File.ReadAllText(Application.StartupPath & "\bot\vip.txt") + vbNewLine + vbNewLine + "No info" + vbNewLine + "No info")
         ElseIf FirstArg = "onlygirls" Then
             If UserVariables.GetRole(Author.Id) = "User" Or UserVariables.GetRole(Author.Id) = "Bronze" Then
                 TelegramBot.GetTelegram().SendTextMessageAsync(Author.Id, "You are not VIP.")
